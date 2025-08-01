@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Atwood Machine Simulator</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Atwood Machine Simulator</h1>
+    <div id="sliders">
+      <label for="mass1Slider">Mass 1 (kg):</label>
+      <input type="range" id="mass1Slider" min="1" max="10" step="0.1" value="5" />
+      <span id="mass1Label">5</span> kg
+
+      <br />
+
+      <label for="mass2Slider">Mass 2 (kg):</label>
+      <input type="range" id="mass2Slider" min="1" max="10" step="0.1" value="7" />
+      <span id="mass2Label">7</span> kg
+    </div>
+    <script src="sketch.js"></script>
+
+    <div id="controls">
+  <button id="pauseBtn" class="control-btn">Pause</button>
+  <button id="resumeBtn" class="control-btn">Resume</button>
+  <button id="resetBtn" class="control-btn">Reset</button>
+  <button id="slowMotionBtn" class="control-btn">Toggle Slow Motion</button>
+  <span id="slowMotionStatus">Normal Speed</span>
+  </div>
+
+  <!-- Explanation button -->
+<button id="explanationBtn" class="control-btn blue-btn">ℹ️ Explanation</button>
+
+<!-- Explanation panel -->
+<div id="explanationPanel" style="display:none; position:absolute; background-color:#222; color:#eee; padding:15px; border-radius:8px; box-shadow:0 0 15px #000; width:320px; max-height:300px; overflow-y:auto; font-size:14px; line-height:1.4; z-index:100;">
+  <button id="closeExplanationBtn" title="Close" style="position:absolute; top:5px; right:8px; background:none; border:none; font-size:22px; font-weight:bold; color:#ff5555; cursor:pointer;">×</button>
+  <h3 style="margin-top:0;">Atwood Machines</h3>
+  <p>
+    An Atwood machine consists of two masses connected by a string over a frictionless pulley.
+    The acceleration <em>a</em> of the masses and the tension <em>T</em> in the string depend on the masses:
+  </p>
+  <ul>
+    <li>Acceleration: <em>a = (m₂ - m₁)g / (m₁ + m₂)</em></li>
+    <li>Tension: <em>T = m₁ (g + a) = m₂ (g - a)</em></li>
+  </ul>
+  <p>
+    Here, <em>g</em> is the acceleration due to gravity (~9.8 m/s²). The heavier mass accelerates downward while the lighter one moves upward.
+  </p>
+  <p>
+    This setup illustrates Newton's Second Law and the relationship between forces in connected systems.
+  </p>
+</div>
+
+  </main>
+</body>
+</html>
