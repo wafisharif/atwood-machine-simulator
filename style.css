@@ -1,0 +1,84 @@
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+#sliders {
+  margin: 10px auto;
+  padding: 10px;
+  max-width: 400px;
+}
+
+input[type=range] {
+  width: 200px;
+}
+
+#controls {
+  margin: 15px auto;
+}
+
+#controls button {
+  margin: 0 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e88e5;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#controls button:hover {
+  background-color: #1565c0;
+}
+
+.control-btn {
+  background-color: #333;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin: 5px 8px 5px 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+  background-color: #555;
+}
+
+.control-btn:focus {
+  outline: 2px solid #80c0ff;
+  outline-offset: 2px;
+}
+
+/* Floating Explanation button on top-right corner of canvas */
+#explanationBtn {
+  position: absolute;
+  z-index: 100;
+  background-color: #1e88e5; /* Same blue as your other buttons */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(30,136,229,0.6);
+}
+
+#explanationBtn:hover {
+  background-color: #1565c0;
+}
